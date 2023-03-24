@@ -1,0 +1,9 @@
+{
+    "name": "dragon2517/advanced-php-zero",
+    "autoload": {
+        "psr-4": {
+            "Dragon2517\\AdvancedPhpZero\\": "Zero/"
+        }
+    },
+    "require": {}
+}
