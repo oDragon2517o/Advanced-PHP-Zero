@@ -5,5 +5,7 @@
             "Dragon2517\\AdvancedPhpZero\\": "Zero/"
         }
     },
-    "require": {}
+    "require": {
+        "fakerphp/faker": "^1.21"
+    }
 }
