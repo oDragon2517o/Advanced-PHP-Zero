@@ -8,7 +8,7 @@ use Dragon2517\AdvancedPhpZero\Person\Name;
 use PDO;
 
 
-class SqliteUsersRepository
+class SqliteUsersRepository implements UsersRepositoryInterface
 {
     public function __construct(
         private PDO $connection

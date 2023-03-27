@@ -3,32 +3,24 @@
 namespace Dragon2517\AdvancedPhpZero\Blog\Repositories\UsersRepository;
 
 use Dragon2517\AdvancedPhpZero\Blog\User;
+use Dragon2517\AdvancedPhpZero\Blog\UUID;
 
-class InMemoryUsersRepository
+class InMemoryUsersRepository implements UsersRepositoryInterface
 {
-    /**
-     * @var User[]
-     */
     private array $users = [];
-    /**
-     * @param User $user
-     */
     public function save(User $user): void
     {
         $this->users[] = $user;
     }
-    /**
-     * @param int $id
-     * @return User
-     * @throws UserNotFoundException
-     */
-    public function get(int $id): User
+    // Заменили int на UUID
+    public function get(UUID $uuid): User
     {
         foreach ($this->users as $user) {
-            if ($user->id() === $id) {
+            // Сравниваем строковые представления UUID
+            if ((string)$user->uuid() === (string)$uuid) {
                 return $user;
             }
         }
-        throw new UserNotFoundException("User not found: $id");
+        throw new UserNotFoundException("User not found: $uuid");
     }
 }
