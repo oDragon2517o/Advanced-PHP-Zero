@@ -6,28 +6,28 @@ use Dragon2517\AdvancedPhpZero\Person\Name;
 
 class User
 {
-    private int $id;
-    private Name $username;
-    private string $login;
-    private UUID $uuid;
+    // private int $id;
+    // private Name $username;
+    // private string $login;
+    // private UUID $uuid;
 
 
-    /**
-     * @param int $id
-     * @param Name $username
-     * @param string $login
-     */
-    public function __construct(UUID $UUID, Name $username)
+    public function __construct(
+        private UUID $uuid,
+        private string $username,
+        private Name $name
+    ) {
+    }
+    public function username(): string
     {
-        $this->uuid = $UUID;
-        $this->username = $username;
-        // $this->login = $login;
+        return $this->username;
     }
 
-    public function __toString(): string
-    {
-        return "Юзер $this->id с именем $this->username и логином $this->login." . PHP_EOL;
-    }
+
+    // public function __toString(): string
+    // {
+    //     return "Юзер $this->id с именем $this->username и логином $this->login." . PHP_EOL;
+    // }
 
 
     public function uuid(): UUID
@@ -39,17 +39,17 @@ class User
     /**
      * @return int
      */
-    public function id(): int
-    {
-        return $this->id;
-    }
+    // public function id(): int
+    // {
+    //     return $this->id;
+    // }
 
     /**
      * @param int $id
      */
     public function setId(int $id): void
     {
-        $this->id = $id;
+        // $this->id = $id;
     }
 
     /**
@@ -71,24 +71,24 @@ class User
     /**
      * @return string
      */
-    public function getLogin(): string
-    {
-        return $this->login;
-    }
+    // public function getLogin(): string
+    // {
+    //     return $this->login;
+    // }
 
     /**
      * @param string $login
      */
-    public function setLogin(string $login): void
-    {
-        $this->login = $login;
-    }
+    // public function setLogin(string $login): void
+    // {
+    //     $this->login = $login;
+    // }
 
     /**
      * @return Name
      */
     public function name(): Name
     {
-        return $this->username;
+        return $this->name;
     }
 }

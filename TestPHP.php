@@ -23,5 +23,5 @@ class men
 }
 
 
-$Xmen = new men('Logan');
+$Xmen = new men(new name('Logan'));
 print_r($Xmen->username());
