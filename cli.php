@@ -7,6 +7,9 @@ use Dragon2517\AdvancedPhpZero\Blog\Commands\Arguments;
 use Dragon2517\AdvancedPhpZero\Blog\Exceptions\AppException;
 
 
+// $username = 'ivan';
+// $first_name = 'Ivan';
+// $last_name = 'Nikitin';
 
 require_once __DIR__ . '/vendor/autoload.php';
 $usersRepository = new SqliteUsersRepository(
