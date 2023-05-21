@@ -1,5 +1,7 @@
 <?php
 
+goto a;
+
 class name
 {
     private string $Name;
@@ -25,3 +27,6 @@ class men
 
 $Xmen = new men(new name('Logan'));
 print_r($Xmen->username());
+
+a:
+echo $argv[1];
