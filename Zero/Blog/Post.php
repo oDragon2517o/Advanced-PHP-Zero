@@ -8,12 +8,52 @@ use Dragon2517\AdvancedPhpZero\Person\Person;
 class Post
 {
     public function __construct(
-        private Person $author,
-        private string $text
+        private UUID $uuid,
+        private User $userUuid,
+        private string $title,
+        private string $text,
     ) {
     }
-    public function __toString()
+
+    public function uuid(): UUID
     {
-        return $this->author . ' пишет: ' . $this->text;
+        return $this->uuid;
+    }
+
+
+    public function getUser(): User
+    {
+        return $this->userUuid;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
+    }
+    /**
+     * @param string $title
+     */
+    public function setTitle(string $title): void
+    {
+        $this->title = $title;
+    }
+
+
+    /**
+     * @return string
+     */
+    public function getText(): string
+    {
+        return $this->text;
+    }
+    /**
+     * @param string $title
+     */
+    public function setText(string $text): void
+    {
+        $this->text = $text;
     }
 }

@@ -41,7 +41,7 @@ foreach ($argv as $argument) {
 }
 print_r($arguments);
 
-a:
+
 
 class koleso
 {
@@ -110,3 +110,5 @@ class Person
         echo "Имя: $person->name Возраст: $person->age<br>";
     }
 }
+
+a:
