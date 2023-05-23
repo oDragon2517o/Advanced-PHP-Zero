@@ -112,3 +112,12 @@ class Person
 }
 
 a:
+
+
+require_once __DIR__ . '/vendor/autoload.php';
+while (true) {
+    $uuid = uuid_create(UUID_TYPE_RANDOM);
+    print_r($uuid);
+    echo "\n";
+    sleep("1");
+}

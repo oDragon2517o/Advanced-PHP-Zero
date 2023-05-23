@@ -50,10 +50,15 @@ class Post
         return $this->text;
     }
     /**
-     * @param string $title
+     * @param string $text
      */
     public function setText(string $text): void
     {
         $this->text = $text;
     }
+
+    // public function __toString()
+    // {
+    //     return $this->uuid();
+    // }
 }

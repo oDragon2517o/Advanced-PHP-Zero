@@ -43,7 +43,7 @@ $pdo->exec(
     CONSTRAINT post_uuid UNIQUE,
     author_uuid TEXT NOT NULL
     CONSTRAINT author_uuid UNIQUE,
-    last_name TEXT NOT NULL
+    text TEXT NOT NULL
 
     )'
 );
