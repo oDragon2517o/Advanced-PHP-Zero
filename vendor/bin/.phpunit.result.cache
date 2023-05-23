@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Dragon2517\\Blog\\UnitTests\\Commands\\ArgumentsTest::testItReturnsArgumentsValueByName":7},"times":{"Dragon2517\\Blog\\UnitTests\\HelloTest::testItWorks":0,"Dragon2517\\Blog\\UnitTests\\Commands\\ArgumentsTest::testItReturnsArgumentsValueByName":0.003,"Dragon2517\\Blog\\UnitTests\\Commands\\ArgumentsTest::testItReturnsValuesAsStrings":0.001}}
