@@ -20,8 +20,8 @@ class SqliteCommentsRepository implements CommentsRepositoryInterface
     {
         // Добавили поле commen в запрос
         $statement = $this->connection->prepare(
-            'INSERT INTO users (uuid, author_uuiid, title, text)
-                VALUES (:uuid, :author_uuiid, :title, :text)'
+            'INSERT INTO users (uuid, post_uuid, author_uuid, text)
+                VALUES (:uuid, :post_uuid, :author_uuid, :text)'
         );
         $statement->execute([
             ':uuid' => (string)$commen->uuid(),
