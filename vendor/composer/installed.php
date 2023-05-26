@@ -3,7 +3,7 @@
         'name' => 'dragon2517/advanced-php-zero',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '1ae7a497b401e18fc025a398f31423d66d31e6ba',
+        'reference' => 'ce437d7fd28cc91aae70bff833141b3cd3dcb45e',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'dragon2517/advanced-php-zero' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '1ae7a497b401e18fc025a398f31423d66d31e6ba',
+            'reference' => 'ce437d7fd28cc91aae70bff833141b3cd3dcb45e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

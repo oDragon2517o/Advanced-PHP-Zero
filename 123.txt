@@ -1,1 +1,3 @@
 php -dxdebug.mode=coverage vendor/bin/phpunit tests --coverage-html coverage_report --coverage-filter Zero
+
+composer test
