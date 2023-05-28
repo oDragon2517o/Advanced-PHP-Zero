@@ -1,123 +1,40 @@
 <?php
 
-goto a;
 
-class name
+
+
+
+class PersonInvalidAgeException extends Exception
 {
-    private string $Name;
-
-    public function __construct(string $Name)
+    function __construct($age)
     {
-        $this->Name = $Name;
+        $this -> message = "Недействительный возраст: $age. Возраст должен быть в диапазоне от 0 до 120";
     }
 }
-
-class men
-{
-    public function __construct(
-        private name $username
-    ) {
-    }
-    public function username(): name
-    {
-        return $this->username;
-    }
-}
-
-
-$Xmen = new men(new name('Logan'));
-print_r($Xmen->username());
-
-exit;
-
-print_r($argv);
-$arguments = [];
-foreach ($argv as $argument) {
-    $parts = explode('=', $argument);
-    if (count($parts) !== 2) {
-        continue;
-    }
-    $arguments[$parts[0]] = $parts[1];
-}
-print_r($arguments);
-
-
-
-class koleso
-{
-    private int $a;
-    private int $b;
-    public function __construct($a, $b)
-    {
-        $this->a = $a;
-        $this->b = $b;
-    }
-
-    public function radius()
-    {
-        echo $this->a . " \n";
-    }
-
-    static function diametr($c)
-    {
-        // echo "$c->b" . " \n";
-        $c->b;
-    }
-
-    public function getB()
-    {
-        echo $this->b;
-    }
-}
-
-class poezd extends koleso
-{
-}
-$koleso = new koleso('20', '40');
-$koleso->radius();
-
-
-$koleso::diametr("100");
-
-$poezd = new poezd('10', '20');
-$poezd->radius();
-$poezd::diametr("100");
-
-$poezd2 = new poezd('10', '20');
-$poezd2->radius();
-// $poezd2::diametr("200");
-$poezd2->getB();
-
-
-
-
-
 class Person
 {
-    public $name, $age;
-    static $retirenmentAge = 65;
+    private $name, $age;
     function __construct($name, $age)
     {
         $this->name = $name;
+        if($age < 0)
+        {
+            throw new PersonInvalidAgeException($age);
+        }
         $this->age = $age;
     }
-    function sayHello()
+    function printInfo()
     {
-        echo "Привет, меня зовут $this->name<br>";
-    }
-    static function printPerson($person)
-    {
-        echo "Имя: $person->name Возраст: $person->age<br>";
+        echo "Name: $this->name<br>Age: $this->age";
     }
 }
-
-a:
-
-
-require_once __DIR__ . '/vendor/autoload.php';
-while (true) {
-    $uuid = uuid_create(UUID_TYPE_RANDOM);
-    print_r($uuid);
-    echo "\n";
-    sleep("1");
+ 
+try
+{
+    $tom = new Person("Tom", -105);
+    $tom->printInfo();
+}
+catch(PersonInvalidAgeException $ex2)
+{
+    echo $ex2 -> getMessage();
 }
